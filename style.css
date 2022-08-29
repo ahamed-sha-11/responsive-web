@@ -1,0 +1,270 @@
+:root{
+  box-sizing: border-box;
+  overflow-x:hidden ;
+}
+body{
+  margin: 0;
+  padding:0;
+  color: antiquewhite;
+  background-color: #333;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar ul li{
+  list-style: none;
+}
+.navbar li a{
+  display: block;
+  margin: 0 20px;
+  width: 100%;
+  text-decoration: none;
+  color: antiquewhite;
+}
+.logo , .logo img{
+  margin-left: 3%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px black;
+}
+#box , #for-box{
+display: none;
+}
+.ney1{
+  font-family: Verdana;
+  font-size: 72px;
+  padding: 20px;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+  animation-name: glitch;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.ney1:before{
+  content: 'NEYMAR';
+  color: gold;
+  position: absolute;
+  margin: 0 0 0 4%;
+  z-index: -3;
+  animation-name: glitch;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.content{
+  margin: 20px 10%;
+}
+.ney{
+  margin: 0 0 0 0;
+  z-index: -2;
+   box-sizing: border-box;
+   position: relative;
+}
+.glitch{
+   position: absolute;
+   box-sizing: border-box;
+   margin: -112px 0 10px 0 ;
+}
+.arrowl{
+width: 120px;
+transform: rotate(45deg);
+animation:arrowl .6s infinite;
+}
+.arrowr{
+width: 120px;
+transform: rotate(-225deg);
+animation:arrowr .6s infinite;
+margin: 0 0 0 85%;
+}
+#this{
+  margin: 50px 0 0 15%;
+  line-height: 30px;
+  text-align: center;
+  width: 480px;
+  word-spacing: 10px;
+
+}
+#this2{
+  margin: 50px 10% 0 40%;
+  line-height: 30px;
+  text-align: center;
+  width: 480px;
+  word-spacing: 10px;
+  display: block;
+}
+.footer{
+  display:flex;
+  width: 100vw;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+.footer h2 {
+  font-family: verdana,Monospace,Times New Roman;
+}
+.foot-links li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 35px 0 0;
+  
+}
+.foot-links a{
+  text-decoration: none;
+  color: purple;
+}
+.footer h3{
+  margin: 0 10px;
+}
+@keyframes glitch{
+  0%{
+    opacity: 0.5;
+  }
+  10%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 0.5;
+  }
+  30%{
+    opacity: 0.7;
+  }
+  40%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  60%{
+    opacity: 0.2;
+  }
+  70%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes arrowl{
+  0%{
+    transform: rotate(30deg);
+  }
+  100%{
+    transform: rotate(45deg);
+  }
+}
+@keyframes arrowr{
+  0%{
+    transform: rotate( -210deg);
+  }
+  100%{
+    transform: rotate(-225deg);
+  }
+}
+@media (max-width:600px) {
+  body{
+      margin: 0;
+      background-color: #333;
+      padding: 0;
+      overflow-x: hidden;
+  }
+  .navbar{
+      display: block;
+      text-align: center;
+      padding: .5rem 0 0 0;
+  }
+  .navbar ul{
+      display: none;
+      background-color: inherit;
+      height: calc(100vh - 2rem);
+      margin: 0;
+  }
+  .navbar li a{
+      margin: 0;
+      display: block;
+      margin-top: 2rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+  }
+  #for-box{
+      display: inline;
+      position: absolute;
+      margin: -1.7rem 20px  1rem 35%;
+  }
+  .logo ,.logo img{
+      margin-left: 15%;
+      width: 30px;
+      height: 2rem;
+      border-radius: 50px;
+      box-shadow: none;
+  }
+  
+  #box:checked ~.navlinks{
+      display: block;
+  }
+  .ney{
+    display: none;
+  }
+  .glitch{
+    position: relative;
+    margin: 0 0 0 5%;    
+ }
+ .content{
+  background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('./bg.jpg');
+  width: 1000px;
+  height: 100vh;
+  margin: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat:no-repeat ;
+  background-attachment: fixed;
+ }
+  .ney1{
+    display: block;
+    font-family: Verdana;
+    font-size: 3rem;
+    color: white;
+    position: relative; 
+    animation: glitch 2s forwards;
+    transform: translateY(50vh);
+    margin: .4rem 0 0 0 ;
+}
+  .footer .ney1{
+    transform: translateY(0);
+  }
+  .ney1::after{
+    margin: 0 0 0 -50%;
+  }
+  .arrowl , .arrowr{
+    display: none;
+  }
+   #this , #this2{
+    margin: 5rem 0  0 2rem;
+  
+    width: 85%;
+    
+   }
+  .footer{
+    width:110%;
+  }
+  .footer h3{
+    width: 70%
+  }
+}
